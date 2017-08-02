@@ -18,7 +18,22 @@ Before creating the custom skill for this tutorial it is recommend that the deve
 
 The last of these (the step-by-step guide) provides steps for creating a skill along with the service endpoint on AWS lambda. For our purposes only Step 1 is required. Also, we recommend that you utilize the Alexa Skills kit builder rather than the original developer portal for defining interaction. 
 
-So, when you get to item 5. you should select the 
+So, when you get to item 5. you should select **Launch Skill Builder**
 
 ![](./LaunchBuilder.png)
+
+This will take you to the Alexa Skills Kit Skills Builder, a more interactive and directed tool for defining Alexa interactions. On the left side you can see the options for dashboard (the initial view), code editor, intents and slots. For this tutorial we will use the provided json file, [helloworld.json](./helloworld.json).
+
+(Note: the interactions option will take you directly to the Skills Builder, from now on).
+
+Copy the text from this file and then select the code editor option from the sidebar. 
+
+![](./CodeEditor.png)
+
+Use Control-A to select all the text in the code editor, then paste the json copied from the helloworld.json file. Click the Apply Changes button.
+
+![](./ApplyChanges.png)
+ 
+ 
+ 
 
