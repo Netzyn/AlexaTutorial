@@ -1,0 +1,52 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "Close",
+      "samples": [
+        "Close Hello World ",
+        "Exit Hello World ",
+        "Exit app",
+        "Close app"
+      ],
+      "slots": []
+    },
+    {
+      "name": "hello",
+      "samples": [
+        "Hello",
+        "Hello world",
+        "Greetings",
+        "Hi"
+      ],
+      "slots": []
+    },
+    {
+      "name": "Move",
+      "samples": [
+        "Move Hello World to {Device} ",
+        "Transfer to {Device}",
+        "Move to {Device}",
+        "Transfer Hello World to {Device} "
+      ],
+      "slots": [
+        {
+          "name": "Device",
+          "type": "AMAZON.DeviceType",
+          "samples": []
+        }
+      ]
+    }
+  ]
+}
