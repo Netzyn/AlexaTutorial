@@ -20,5 +20,5 @@ The last of these (the step-by-step guide) provides steps for creating a skill a
 
 So, when you get to item 5. you should select the 
 
-
+![](./LaunchBuilder.png)
 
