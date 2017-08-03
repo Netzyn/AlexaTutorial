@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements HelloWorldClientI
   private VoiceInterface api;
 ```
 
-* In the `onCreate` function create the VoiceInterface object, passing a reference to the activity (as a `HelloWorldClientInterface` implementation)and a reference to the `Intent`. (Note: this is an android Intent, which is completely separate from Alexa voice intents)
+* In the `onCreate` function create the VoiceInterface object, passing a reference to the activity (as a `HelloWorldClientInterface` implementation) and a reference to the `Intent`. (Note: this is an android Intent, which is completely separate from Alexa voice intents)
 
 ```java
   api = new VoiceInterface(this, this.getIntent());
