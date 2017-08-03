@@ -101,7 +101,7 @@ Modify the Main activity (MainActivity.java) as follows:
 
 ```java
 public class MainActivity extends AppCompatActivity implements HelloWorldClientInterface {
-
+  . . .
 }
 ```
 
