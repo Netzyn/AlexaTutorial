@@ -59,7 +59,7 @@ The configuration screen is where the service endpoint is assigned. The streamin
 
 ### Configuring Account Linking
 
-Streaming apps require account link in order to associate the users device with the Alexa interaction. 
+Streaming apps require account linking in order to associate the users device with the Alexa interaction. 
 * Select yes for account linking which will enable the remaining field in the screen. 
 * Enter the authorization URL, provided with your application configuration. 
 * Select implicit grant as the authorization grant type. 
