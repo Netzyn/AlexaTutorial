@@ -1,4 +1,4 @@
-package com.netzyn.helloworld;
+package com.netzyn.example;
 
 /**
  * Created by Stephen on 7/28/2017.
@@ -6,5 +6,5 @@ package com.netzyn.helloworld;
 
 public interface HelloWorldClientInterface {
 
-    void HelloWorld();
+    void HelloWorld(String sessionId);
 }

@@ -72,6 +72,66 @@ The Alexa app is ready to go, and should show up in the Alexa app under Your Ski
 
 ## Android Application
 
+In order to create the android application we will be using android studio vers. 2.3.1 and SDK version 25. Open android Studio and select New project either from the android studio welcome screen or from the File menu within android studio.
+
+![](./images/New.png)
+
+The following screen will be presented, fill in the fields with the appropriate values, the ones show are just samples.
+
+![](./images/create.png)
+
+Select next to accept the inputs and go to the next screen, select next, on the subsequent two screens to accept the default inputs and select finish on the last screen to create the application.
+
+The two files, `HelloWorldClientInterface.java` and `VoiceInterface.java`, should be added to the project in the package `com.netzyn.example`. 
+
+Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application. 
+
+Modify the Main activity as follows:
+
+* Modify `MainActivity.java` so that it implements `HelloWorldClientInterface`. 
+
+```java
+public class MainActivity extends AppCompatActivity implements HelloWorldClientInterface {
+
+}
+```
+
+* Add an instance variable `api` that will hold the created `VoiceInterface` object:
+
+```java
+  private VoiceInterface api;
+```
+
+* In the `onCreate` function create the object, passing a reference to the activity as a `HelloWorldClientInterface` implementation and a reference to the activities `Intent`. (Note: this is an android Intent, which is completely separate from Alexa voice intents)
+
+```java
+  api = new VoiceInterface(this, this.getIntent());
+```
+
+* Implement the function defined in the `HelloWorldClientInterface` interface: `void HelloWorld();`. A sample implementation that shows a message in the app is provided here. (This shows that voice interface commands need to be posted to the UI thread in most cases);
+
+```java
+  void ShowToast(String msg) {
+    Toast toast = Toast.makeText(
+          this.getApplicationConext(),
+          msg,
+          Toast.LENGTH_LONG);
+    toast.show();
+    )
+  }
+
+  void HelloWorld() {
+    this.runOnUiThread(new Runnable() {
+      @Override
+      public void run() {
+        ShowToast("Hello received");
+      }
+    });
+  }
+```
+
+
+
 
 
 

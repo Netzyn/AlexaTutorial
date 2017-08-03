@@ -1,4 +1,4 @@
-package com.netzyn.helloworld;
+package com.netzyn.example;
 
 import android.content.Intent;
 import android.util.Log;
@@ -8,7 +8,7 @@ import com.netzyn.api.SaApiInterface;
 
 public class VoiceInterface implements SaApiInterface {
     private final String TAG = "VoiceInterface";
-    private final String AppName = "helloworld";
+    private final String AppName = "CHANGE_TO_APP_NAME";
 
     HelloWorldClientInterface client;
     private SaApi api = null;
@@ -22,12 +22,11 @@ public class VoiceInterface implements SaApiInterface {
                       final String parm1, final String parm2, final String parm3, final String parm4, final String parm5)
     {
         if (intent.compareToIgnoreCase("hello") == 0) {
-            client.HelloWorld();
-            api.SaVoiceResponse(sessionId, "ask", "Hi There");
+            client.HelloWorld(sessionId);
         }
-        else if (intent.compareToIgnoreCase("test") == 0) {
-            api.SaVoiceResponse(sessionId, "ask", "Test Complete");
-        }
+    }
+    public void SendResponse(String sessionId, String msg) {
+        api.SaVoiceResponse(sessionId, "ask", msg);
     }
 
     public void SaEventLog(String var1)
