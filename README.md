@@ -95,9 +95,9 @@ Also add the two libraries, `nzlib.jar` and `protobuf-java-2.5.0.jar` to the fol
 Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application. 
 
 
-Modify the Main activity as follows:
+Modify the Main activity (MainActivity.java) as follows:
 
-* Modify `MainActivity.java` so that it implements `HelloWorldClientInterface`. 
+* Modify `MainActivity` class so that it implements the interface `HelloWorldClientInterface`.
 
 ```java
 public class MainActivity extends AppCompatActivity implements HelloWorldClientInterface {
