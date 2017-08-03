@@ -50,9 +50,12 @@ Now that the model is built move to the configuration screen by clicking on the 
 
 ### Configuring Service Endpoint
 
-The configuration screen is where the service endpoint is assigned. The streaming apps platform provides the service endpoint running on AWS lambda, so as shown below select AWS Lambda as the service endpoint type, select North America as the geographical region. Finally, enter the ARN provided from the application configuration and enter it in the provided input box. 
+The configuration screen is where the service endpoint is assigned. The streaming apps platform provides the service endpoint running on AWS lambda
+* Select AWS Lambda as the service endpoint type
+* Select North America as the geographical region
+* Enter the ARN provided from the application configuration
 
- ![](https://s3.amazonaws.com/lantern-code-samples-images/trivia/configuration.PNG)
+ ![](./images/ARN.png)
 
 ### Configuring Account Linking
 
