@@ -1,4 +1,4 @@
-# AlexaTutorial
+# Streaming Apps with Alexa Interaction
 
 In order to build an Alexa-enabled streaming application, the developer will
 need to create an Alexa custom skill and an android application. 
@@ -16,7 +16,9 @@ Before creating the custom skill for this tutorial it is recommend that the deve
 * [Understanding Custom Skills](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/overviews/understanding-custom-skills)
 * [Step-by-Step guide to Trivial Skill](https://github.com/alexa/skill-sample-nodejs-trivia)
 
-The last of these (the step-by-step guide) provides steps for creating a skill along with the service endpoint on AWS lambda. For the initial setup, follow Step 1 up to item 5.  This tutorial uses the Alexa Skills kit builder rather than the original developer portal for defining interaction. 
+The last of these (the step-by-step guide) provides steps for creating a skill along with the service endpoint on AWS lambda. For the initial setup, follow Step 1 up to item 5. An application ID is defined for the skill, this ID will need to be copied to the application configuration. 
+
+This tutorial uses the Alexa Skills kit builder rather than the original developer portal for defining interaction. 
 
 So, when you get to item 5. you should select **Launch Skill Builder**
 
@@ -39,23 +41,36 @@ Click the Dashboard button to return to the dashboard.
 
 ![](./SelectDashboard.png) 
 
-Here you will see that there are now three custom intents defined, Close, hello, Move. Two of these, Close and Move are for controlling the streaming app, the last hello will be deliver to the streaming app via the streaming apps API. The final step on this page is to build the model, do this my clicking on the BuildModel button. The build commence, and with a model this small should not take too long to complete. 
+There are now three custom intents defined, Close, hello, Move. Two of these, Close and Move are for controlling the streaming app, the last hello will be deliver to the streaming app via the streaming apps API. The final step on this page is to build the model, do this by clicking on the BuildModel button. The build will commence and with a model this small should not take too long to complete. 
 
 ![](./BuildModel.png)
 
-
-Now that the model is built you can move to the configuration screen. 
+Now that the model is built move to the configuration screen by clicking on the Configuration option in the icon menu.
 
 ![](./Configuration.png)
 
 ### Configuring Service Endpoint
 
-The configuration screen is where you assign the service endpoint and configure the account linking. The streaming apps platform provides the service endpoint running on AWS lambda, so as shown below selct AWS Lambda as the service endpoint type, select North America as the geographical region. Finally, enter the ARN provide to you in your application configuration and enter it in the provide input box. 
+The configuration screen is where the service endpoint is assigned. The streaming apps platform provides the service endpoint running on AWS lambda, so as shown below select AWS Lambda as the service endpoint type, select North America as the geographical region. Finally, enter the ARN provided from the application configuration and enter it in the provided input box. 
 
  ![](https://s3.amazonaws.com/lantern-code-samples-images/trivia/configuration.PNG)
 
 ### Configuring Account Linking
 
+Streaming apps require account link in order to associate the users device with the Alexa interaction. 
+* Select yes for account linking which will enable the remaining field in the screen. 
+* Enter the authorization URL, provided with your application configuration. 
+* Select implicit grant as the authorization grant type. 
+
+The two Redirect URLs will need to be copied to your application configuration as these are used to validate the authorization requests coming from Alexa during account linking.
+
+![](./AccountLinking.png)
+
+Select Save or Next at the bottom of the screen to save the configuration. 
+
+The Alexa app is ready to go, and should show up in the Alexa app under Your Skills.
+
+## Alexa Custom Skill
 
 
 
