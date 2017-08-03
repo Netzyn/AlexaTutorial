@@ -88,9 +88,9 @@ Select next to accept the inputs and go to the next screen, select next, on the 
 
 ### Add Files
 
-The two files, `HelloWorldClientInterface.java` and `VoiceInterface.java`, should be added to the project in the package `com.netzyn.example`. 
+Add the two files, `HelloWorldClientInterface.java` and `VoiceInterface.java`, to the project in the package `com.netzyn.example`. 
 
-Also add the two libraries, `nzlib.jar` and `protobuf-java-2.5.0.jar` to the folder `app/libs`
+Also, place the two libraries, `nzlib.jar` and `protobuf-java-2.5.0.jar` in the folder `app/libs`
 
 ### Edit the files
 
