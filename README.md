@@ -22,32 +22,32 @@ This tutorial uses the Alexa Skills kit builder rather than the original develop
 
 So, when you get to item 5. you should select **Launch Skill Builder**
 
-![](./LaunchBuilder.png)
+![](./images/LaunchBuilder.png)
 
 ### Skills Builder
 This will take you to the Alexa Skills Kit Skills Builder, a more interactive and directed tool for defining Alexa interactions. On the left side you can see the options for dashboard (the initial view), code editor, intents and slots. For this tutorial we will use the provided json file, [helloworld.json](./helloworld.json). (Note: the interactions option will take you directly to the Skills Builder, from now on).
 
 Copy the text from this file and then select the code editor option from the sidebar. 
 
-![](./CodeEditor.png)
+![](./images/CodeEditor.png)
 
 Use Control-A to select all the text in the code editor, then paste the json copied from the helloworld.json file. 
 
 Click the Apply Changes button.
 
-![](./ApplyChanges.png)
+![](./images/ApplyChanges.png)
  
 Click the Dashboard button to return to the dashboard.
 
-![](./SelectDashboard.png) 
+![](./images/SelectDashboard.png) 
 
 There are now three custom intents defined, Close, hello, Move. Two of these, Close and Move are for controlling the streaming app, the last hello will be deliver to the streaming app via the streaming apps API. The final step on this page is to build the model, do this by clicking on the BuildModel button. The build will commence and with a model this small should not take too long to complete. 
 
-![](./BuildModel.png)
+![](./images/BuildModel.png)
 
 Now that the model is built move to the configuration screen by clicking on the Configuration option in the icon menu.
 
-![](./Configuration.png)
+![](./images/Configuration.png)
 
 ### Configuring Service Endpoint
 
@@ -64,7 +64,7 @@ Streaming apps require account link in order to associate the users device with 
 
 The two Redirect URLs will need to be copied to your application configuration as these are used to validate the authorization requests coming from Alexa during account linking.
 
-![](./AccountLinking.png)
+![](./images/AccountLinking.png)
 
 Select Save or Next at the bottom of the screen to save the configuration. 
 
