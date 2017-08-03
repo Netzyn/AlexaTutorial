@@ -5,8 +5,7 @@ need to create an Alexa custom skill and an android application.
 
 The custom skill is a standard Alexa skill with the addition of a couple of intents specific to controlling the streaming app. In order to enable the control of the streaming app the custom skill is directed to use the Streaming Apps service endpoint running on AWS lambda servers.
 
-The android application in not limited in its functionality, and is only required to instantiate the interface to the streaming apps API and to implement the responses to the Alexa voice command intents. The sample code in this tutorial will create a separate class that isolates the interaction with the streaming app API and a java interface for the required commands.
-
+The android application in not limited in its functionality, and is only required to instantiate the interface to the streaming apps API and to implement the responses to the Alexa voice command intents. The sample code in this tutorial will create a separate class that isolates the interaction with the streaming app API and a java interface for the required commands. 
 The implementation described herein is a simple "Hello World" application that allows you to say a greeting to Alexa and have the android application provide a response. 
 
 ## Alexa Custom Skill
@@ -92,7 +91,7 @@ Also add the two libraries, `nzlib.jar` and `protobuf-java-2.5.0.jar` to the fol
 
 ### Edit the files
 
-Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application. 
+Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application.
 
 
 Modify the Main activity (MainActivity.java) as follows:
