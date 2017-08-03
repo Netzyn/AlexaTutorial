@@ -22,18 +22,36 @@ So, when you get to item 5. you should select **Launch Skill Builder**
 
 ![](./LaunchBuilder.png)
 
-This will take you to the Alexa Skills Kit Skills Builder, a more interactive and directed tool for defining Alexa interactions. On the left side you can see the options for dashboard (the initial view), code editor, intents and slots. For this tutorial we will use the provided json file, [helloworld.json](./helloworld.json).
-
-(Note: the interactions option will take you directly to the Skills Builder, from now on).
+This will take you to the Alexa Skills Kit Skills Builder, a more interactive and directed tool for defining Alexa interactions. On the left side you can see the options for dashboard (the initial view), code editor, intents and slots. For this tutorial we will use the provided json file, [helloworld.json](./helloworld.json). (Note: the interactions option will take you directly to the Skills Builder, from now on).
 
 Copy the text from this file and then select the code editor option from the sidebar. 
 
 ![](./CodeEditor.png)
 
-Use Control-A to select all the text in the code editor, then paste the json copied from the helloworld.json file. Click the Apply Changes button.
+Use Control-A to select all the text in the code editor, then paste the json copied from the helloworld.json file. 
+
+Click the Apply Changes button.
 
 ![](./ApplyChanges.png)
  
- 
+Click the Dashboard button to return to the dashboard.
+
+![](./SelectDashboard.png) 
+
+Here you will see that there are now three custom intents defined, Close, hello, Move. Two of these, Close and Move are for controlling the streaming app, the last hello will be deliver to the streaming app via the streaming apps API. The final step on this page is to build the model, do this my clicking on the BuildModel button.
+
+![](./BuildModel.png)
+
+Now that the model is build you can move to the configuration screen. 
+
+![](./Configuration.png)
+
+The configuration screen is where you assign the service endpoint and configure the account linking. The streaming apps platform provides the service endpoint running on AWS lambda, so as shown below selct AWS Lambda as the service endpoint type, select North America as the geographical region. Finally, enter the ARN provide to you in your application configuration and enter it in the provide input box. 
+
+ ![](https://s3.amazonaws.com/lantern-code-samples-images/trivia/configuration.PNG)
+
+
+
+
  
 
