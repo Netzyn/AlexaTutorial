@@ -74,6 +74,8 @@ The Alexa app is ready to go, and should show up in the Alexa app under Your Ski
 
 In order to create the android application we will be using android studio vers. 2.3.1 and SDK version 25. Open android Studio and select New project either from the android studio welcome screen or from the File menu within android studio.
 
+### Create the Android Application
+
 ![](./images/New.png)
 
 The following screen will be presented, fill in the fields with the appropriate values, the ones show are just samples.
@@ -82,9 +84,16 @@ The following screen will be presented, fill in the fields with the appropriate 
 
 Select next to accept the inputs and go to the next screen, select next, on the subsequent two screens to accept the default inputs and select finish on the last screen to create the application.
 
+### Add Files
+
 The two files, `HelloWorldClientInterface.java` and `VoiceInterface.java`, should be added to the project in the package `com.netzyn.example`. 
 
+Also add the two libraries, `nzlib.jar` and `protobuf-java-2.5.0.jar` to the folder `app/libs`
+
+### Edit the files
+
 Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application. 
+
 
 Modify the Main activity as follows:
 
@@ -130,6 +139,17 @@ public class MainActivity extends AppCompatActivity implements HelloWorldClientI
   }
 ```
 
+### Build apk file
+
+Use the build tool to build the application:
+
+![](./images/BuildApp.png)
+
+If there are no errors, then build the apk file by selecting Build Apk from the Build menu.
+
+The apk file will be located in `app/build/outputs/apk/app-debug.apk`.
+
+Follow the instructions on the developer page for uploading the apk file.
 
 
 
