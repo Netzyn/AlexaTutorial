@@ -74,9 +74,17 @@ The Alexa app is ready to go, and should show up in the Alexa app under Your Ski
 
 ## Android Application
 
-In order to create the android application we will be using android studio vers. 2.3.1 and SDK version 25. Open android Studio and select New project either from the android studio welcome screen or from the File menu within android studio.
+For the android application we will be using android studio vers. 2.3.1 and SDK version 25. There are two choices for developing the application, download the application from github or create the application in Android Studio and add the files from this repository
+
+### Download/clone application
+
+Go to this repository and clone or download the project [repository](https://github.com/Netzyn/HelloWorldApp)
+
+Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application.
 
 ### Create the Android Application
+
+Open android Studio and select New project either from the android studio welcome screen or from the File menu within android studio.
 
 ![](./images/New.png)
 
