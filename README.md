@@ -8,7 +8,7 @@ The custom skill is a standard Alexa skill with the addition of a couple of inte
 The android application in not limited in its functionality, and is only required to instantiate the interface to the streaming apps API and to implement the responses to the Alexa voice command intents. The sample code in this tutorial will create a separate class that isolates the interaction with the streaming app API and a java interface for the required commands. 
 The implementation described herein is a simple "Hello World" application that allows you to say a greeting to Alexa and have the android application provide a response. 
 
-## Alexa Custom Skill
+# Alexa Custom Skill
 Before creating the custom skill for this tutorial it is recommend that the developer take some time to get familiar with some of the aspects of Alexa skills development, using the following links. Note, that the service endpoint is supplied by the streaming apps platform, so that part of the documentation can be safely ignored.
 
 * [Getting started with Alexa Skills Kit](https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/getting-started-guide)
@@ -23,7 +23,7 @@ So, when you get to item 5. you should select **Launch Skill Builder**
 
 ![](./images/LaunchBuilder.png)
 
-### Skills Builder
+## Skills Builder
 This will take you to the Alexa Skills Kit Skills Builder, a more interactive and directed tool for defining Alexa interactions. On the left side you can see the options for dashboard (the initial view), code editor, intents and slots. For this tutorial we will use the provided json file, [helloworld.json](./helloworld.json). (Note: the interactions option will take you directly to the Skills Builder, from now on).
 
 Copy the text from this file and then select the code editor option from the sidebar. 
@@ -48,7 +48,7 @@ Now that the model is built move to the configuration screen by clicking on the 
 
 ![](./images/Configuration.png)
 
-### Configuring Service Endpoint
+## Configuring Service Endpoint
 
 The configuration screen is where the service endpoint is assigned. The streaming apps platform provides the service endpoint running on AWS lambda
 * Select AWS Lambda as the service endpoint type
@@ -57,7 +57,7 @@ The configuration screen is where the service endpoint is assigned. The streamin
 
  ![](./images/ARN.png)
 
-### Configuring Account Linking
+## Configuring Account Linking
 
 Streaming apps require account linking in order to associate the users device with the Alexa interaction. 
 * Select yes for account linking which will enable the remaining field in the screen. 
@@ -72,17 +72,32 @@ Select Save or Next at the bottom of the screen to save the configuration.
 
 The Alexa app is ready to go, and should show up in the Alexa app under Your Skills.
 
-## Android Application
+# Android Application
 
 For the android application we will be using android studio vers. 2.3.1 and SDK version 25. There are two choices for developing the application, download the application from github or create the application in Android Studio and add the files from this repository
 
-### Download/clone application
+## Download/clone application
 
 Go to this repository and clone or download the project [repository](https://github.com/Netzyn/HelloWorldApp)
 
-Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application.
+### Edit the files
 
-### Create the Android Application
+Edit `VoiceInterface.java` (line 11), replacing `CHANGE_TO_APP_NAME` with the app name assigned to your application.
+Edit `MainActivity.java` (line 35), replacing `REPLACE WITH YOUR MESSAGE` with the message that Alexa should say.
+
+### Build apk file
+
+Use the build tool to build the application:
+
+![](./images/BuildApp.png)
+
+If there are no errors, then build the apk file by selecting Build Apk from the Build menu.
+
+The apk file will be located in `app/build/outputs/apk/app-debug.apk`.
+
+Follow the instructions on the developer page for uploading the apk file.
+
+## Create the Android Application
 
 Open android Studio and select New project either from the android studio welcome screen or from the File menu within android studio.
 
@@ -94,13 +109,13 @@ The following screen will be presented, fill in the fields with the appropriate 
 
 Select next to accept the inputs and go to the next screen, select next, on the subsequent two screens to accept the default inputs and select finish on the last screen to create the application.
 
-### Add Files
+## Add Files
 
 Add the two files, `HelloWorldClientInterface.java` and `VoiceInterface.java`, to the project in the package `com.netzyn.example`. 
 
 Also, place the two libraries, `nzlib.jar` and `protobuf-java-2.5.0.jar` in the folder `app/libs`
 
-### Edit the files
+## Edit the files
 
 Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application.
 
@@ -130,22 +145,23 @@ public class MainActivity extends AppCompatActivity implements HelloWorldClientI
 * Implement the function defined in the `HelloWorldClientInterface` interface: `void HelloWorld();`. A sample implementation that shows a toaster message in the app is provided here. (The example shows how voice interface commands need to be posted to the UI thread in most cases);
 
 ```java
-  void ShowToast(String msg) {
+  private void ShowToast(String msg) {
     Toast toast = Toast.makeText(
-          this.getApplicationConext(),
+          this.getApplicationContext(),
           msg,
           Toast.LENGTH_LONG);
     toast.show();
-    )
   }
 
-  void HelloWorld() {
+  public void HelloWorld(String sessionId) {
     this.runOnUiThread(new Runnable() {
       @Override
       public void run() {
         ShowToast("Hello received");
       }
     });
+
+    api.SendResponse(sessionId, "REPLACE WITH YOUR MESSAGE");
   }
 ```
 
