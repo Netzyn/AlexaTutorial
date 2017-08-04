@@ -83,6 +83,7 @@ Go to this repository and clone or download the project [repository](https://git
 ### Edit the files
 
 Edit `VoiceInterface.java` (line 11), replacing `CHANGE_TO_APP_NAME` with the app name assigned to your application.
+
 Edit `MainActivity.java` (line 35), replacing `REPLACE WITH YOUR MESSAGE` with the message that Alexa should say.
 
 ### Build apk file
@@ -118,7 +119,6 @@ Also, place the two libraries, `nzlib.jar` and `protobuf-java-2.5.0.jar` in the 
 ## Edit the files
 
 Edit `VoiceInterface.java`, replacing `CHANGE_TO_APP_NAME` on line 11 to the app name assigned to your application.
-
 
 Modify the Main activity (MainActivity.java) as follows:
 
