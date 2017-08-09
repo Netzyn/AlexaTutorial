@@ -40,7 +40,7 @@ Click the Dashboard button to return to the dashboard.
 
 ![](./images/SelectDashboard.png) 
 
-There are now three custom intents defined, Close, hello, Move. Two of these, Close and Move are for controlling the streaming app, the last hello will be deliver to the streaming app via the streaming apps API. The final step on this page is to build the model, do this by clicking on the BuildModel button. The build will commence and with a model this small should not take too long to complete. 
+There are now four custom intents defined, Close, hello, Launch and Move. Three of these, Close, Launch and Move are for controlling the streaming app, the other intent `hello` will be delivered to the streaming app via the streaming apps API. The final step on this page is to build the model, do this by clicking on the BuildModel button. The build will commence and with a model this small should not take too long to complete. 
 
 ![](./images/BuildModel.png)
 
