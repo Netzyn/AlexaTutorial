@@ -33,6 +33,23 @@
       "slots": []
     },
     {
+      "name": "Launch",
+      "samples": [
+        "Open on {Device} ",
+        "Launch on {Device} ",
+        "Start on {Device} ",
+        "View on {Device} ",
+        "on {Device}"
+      ],
+      "slots": [
+        {
+          "name": "Device",
+          "type": "AMAZON.DeviceType",
+          "samples": []
+        }
+      ]
+    },
+    {
       "name": "Move",
       "samples": [
         "Move Hello World to {Device} ",
