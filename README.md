@@ -84,7 +84,7 @@ Go to this repository and clone or download the project [repository](https://git
 
 Edit `VoiceInterface.java` (line 11), replacing `CHANGE_TO_APP_NAME` with the app name assigned to your application.
 
-Edit `MainActivity.java` (line 35), replacing `REPLACE WITH YOUR MESSAGE` with the message that Alexa should say.
+Edit `MainActivity.java` (line 41), replacing `REPLACE WITH YOUR MESSAGE` with the message that Alexa should say.
 
 ### Build apk file
 
