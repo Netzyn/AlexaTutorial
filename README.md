@@ -139,7 +139,17 @@ public class MainActivity extends AppCompatActivity implements HelloWorldClientI
 * In the `onCreate` function create the VoiceInterface object, passing a reference to the activity (as a `HelloWorldClientInterface` implementation) and a reference to the `Intent`. (Note: this is an android Intent, which is completely separate from Alexa voice intents)
 
 ```java
-  api = new VoiceInterface(this, this.getIntent());
+  api = VoiceInterface.startVoiceInterface(this, this.getIntent());
+```
+
+* Implement the override for the onDestroy lifecycle function and call the onDestroy function of the VoiceInterface object.
+
+```java
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        api.onDestroy();
+    }
 ```
 
 * Implement the function defined in the `HelloWorldClientInterface` interface: `void HelloWorld();`. A sample implementation that shows a toaster message in the app is provided here. (The example shows how voice interface commands need to be posted to the UI thread in most cases);
