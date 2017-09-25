@@ -8,7 +8,6 @@ import com.netzyn.api.SaApiInterface;
 
 public class VoiceInterface implements SaApiInterface {
     private final String TAG = "VoiceInterface";
-    private final String AppName = "CHANGE_TO_APP_NAME";
 
     HelloWorldClientInterface client;
     private SaApi api = null;
@@ -16,7 +15,7 @@ public class VoiceInterface implements SaApiInterface {
     VoiceInterface(HelloWorldClientInterface client, Intent intent)
     {
         this.client = client;
-        api = new SaApi(AppName, intent, this);
+        api = new SaApi(intent, this);
     }
     public void SaEventVoice(String user, String device, String app, final String sessionId, String intent,
                       final String parm1, final String parm2, final String parm3, final String parm4, final String parm5)
